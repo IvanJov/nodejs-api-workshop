@@ -17,6 +17,7 @@ function booksController(models) {
   function index(req, res, next) {
     Book
       .find({})
+      .populate('author')
       .exec(function (err, books) {
         if (err) {
           throw err;
@@ -31,6 +32,7 @@ function booksController(models) {
 
     Book
       .findById(bookId)
+      .populate('author')
       .exec(function (err, book) {
         if (err) {
           console.log(err);
