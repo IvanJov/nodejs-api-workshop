@@ -1,10 +1,10 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var ObjectId = Schema.Types.ObjectId;
-var Author = require('./author');
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+const ObjectId = Schema.Types.ObjectId
+const Author = require('./author')
 
 function book() {
-  var Book = new Schema({
+  const Book = new Schema({
     name: {
       type: String,
       required: true
@@ -26,9 +26,9 @@ function book() {
       type: Number,
       default: 0
     }
-  });
+  })
 
-  return Book;
+  return Book
 }
 
-module.exports = book;
+module.exports = book

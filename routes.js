@@ -1,7 +1,7 @@
 function routes(app, models) {
-  var controllers = require('./controllers')(models);
-  var booksController = controllers.bookController;
-  var authorController = controllers.authorController;
+  const controllers = require('./controllers')(models);
+  const booksController = controllers.bookController;
+  const authorController = controllers.authorController;
 
   app.get('/api/books', booksController.index);
   app.get('/api/books/:bookId', booksController.show);

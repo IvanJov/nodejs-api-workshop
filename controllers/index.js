@@ -5,4 +5,4 @@ function controllers(models) {
   }
 }
 
-module.exports  = controllers;
+module.exports  = controllers
